@@ -23,7 +23,9 @@ public class EmployeeMain
 		for(int i = 0; i < size; i++)
 		{
 			if(key.equalsIgnoreCase(arr[i].getName()))
+//			if(arr[i].getName()==key)
 			{
+				
 				return i;
 			}
 		}
@@ -114,14 +116,14 @@ public class EmployeeMain
 			case 2:
 			{
 				
-				System.out.print("Enter Employee ID To Search:");
+				System.out.print("Enter Employee Name To Search:");
 				String key = sc.next();
 				
 				int index = searchByName(arr, arr.length, key);
 				
 				if(index == -1)
 				{
-					System.out.println("No Such Employee Found with Employee Id:."+key);
+					System.out.println("No Such Employee Found with Employee Name:."+key);
 				}
 				else
 				{
